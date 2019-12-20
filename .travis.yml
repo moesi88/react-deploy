@@ -5,7 +5,7 @@ cache: yarn
 
 before_install:
 install:
-  - yarn ci
+  - yarn install
 
 script:
   - yarn test
@@ -15,5 +15,6 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
+  local_dir: build
   on:
     branch: master
